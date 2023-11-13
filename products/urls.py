@@ -3,5 +3,8 @@ from . import views as myviews
 
 urlpatterns = [
     path('products/', myviews.products, name='products-url'),
-    path('add-products/', myviews.add_products, name='add-products-url')
+    path('add_products/', myviews.add_products, name='add-products-url'),
+    path('delete/<id>', myviews.delete, name='delete-url'),
+    path('update/<id>', myviews.update_products, name='update-url'),
+    path('pay/<id>',myviews.pay, name = 'pay-url'),
 ]
